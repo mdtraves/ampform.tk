@@ -14,9 +14,9 @@ $redirect_url = 'ampform.tk/ty.php';
 
 /*/--Assuming all validations are good here--*/
 header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");   
+header("AMP-Redirect-To: ".$redirect_url);
 
     echo json_encode(array('successmsg'=>$_POST['name'].'My success message. [It will be displayed shortly(!) if with redirect]'));
-    header("AMP-Redirect-To: ".$redirect_url);
 
     die();
 }
