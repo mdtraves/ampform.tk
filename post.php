@@ -9,7 +9,7 @@ header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: *.ampproject.org");
 header("AMP-Access-Control-Allow-Source-Origin: ".$domain_url);
 
-$redirect_url = 'ampform.tk/ty.php';
+$redirect_url = 'https://ampform.tk/ty.php';
 
 
 /*/--Assuming all validations are good here--*/
@@ -20,5 +20,7 @@ header("AMP-Redirect-To: ".$redirect_url);
 
     die();
 }
+
+header("AMP-Redirect-To: ".$redirect_url);
 
 ?>
